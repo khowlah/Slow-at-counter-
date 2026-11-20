@@ -1,0 +1,38 @@
+name: salawat_counter
+description: "تطبيق عدّاد الصلاة على النبي ﷺ — عداد شخصي وإجمالي لكل المستخدمين عبر Firestore"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # Firebase
+  firebase_core: ^3.6.0
+  cloud_firestore: ^5.4.4
+
+  # تخزين محلي لهوية الجهاز وعدد الصلوات المحفوظة مؤقتًا (offline-first)
+  shared_preferences: ^2.3.2
+  uuid: ^4.5.1
+
+  # خطوط عربية جميلة (اختياري لكن يحسّن الشكل)
+  google_fonts: ^6.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/masjid_nabawi.jpg
+    - assets/branding/
+

@@ -1,0 +1,39 @@
+rules_version = '2';
+
+// قواعد أمان مبدئية مناسبة لتطبيق عدّاد بلا تسجيل دخول.
+// كل مستخدم (بمعرّف جهاز عشوائي) يقدر يقرأ/يكتب مستنده فقط،
+// وكل الأجهزة تقدر تقرأ إجمالي stats/global لكن ما تقدر تكتب فيه مباشرة إلا برقم صحيح موجب.
+//
+// ملاحظة أمنية مهمة: بما إنه ما فيه تسجيل دخول حقيقي (Firebase Auth)،
+// أي شخص يعرف تقنيًا يقدر يزوّر الطلبات ويضخّم رقمه أو الإجمالي العام.
+// هذا مقبول لتطبيق تفاعلي بسيط (مثل عدّاد تسبيح جماعي) لكنه غير مناسب
+// لو احتجتِ لاحقًا حماية صارمة — عندها الحل الصحيح هو نقل الزيادة
+// إلى Cloud Function (خادم موثوق) بدل الكتابة المباشرة من الجهاز.
+//
+// حد الزيادة لكل كتابة واحدة هو 100 (سواء عبر التطبيق أو مباشرة عبر REST API)،
+// لمنع تضخيم الأرقام بشكل هائل دفعة واحدة كما حصل سابقًا.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /users/{deviceId} {
+      allow read: if true;
+      allow create: if request.resource.data.count is int
+                    && request.resource.data.count >= 0
+                    && request.resource.data.count <= 100;
+      allow update: if request.resource.data.count is int
+                    && request.resource.data.count >= 0
+                    && request.resource.data.count <= resource.data.count + 100;
+    }
+
+    match /stats/global {
+      allow read: if true;
+      allow create: if request.resource.data.total is int
+                    && request.resource.data.total >= 0
+                    && request.resource.data.total <= 100;
+      allow update: if request.resource.data.total is int
+                    && request.resource.data.total >= 0
+                    && request.resource.data.total <= resource.data.total + 100;
+    }
+  }
+}

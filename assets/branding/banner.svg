@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="emeraldBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022C22"/>
+      <stop offset="50%" stop-color="#064E3B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <radialGradient id="goldGlow" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#022C22" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="420" fill="url(#emeraldBg)"/>
+  <rect width="1200" height="420" fill="url(#goldGlow)"/>
+
+  <!-- Islamic Geometric Pattern Overlay -->
+  <g opacity="0.08" stroke="#FDE68A" stroke-width="1.2" fill="none">
+    <!-- Star repeats across top and bottom -->
+    <path d="M 100 50 L 120 70 L 150 70 L 130 90 L 140 120 L 110 105 L 80 120 L 90 90 L 70 70 L 100 70 Z"/>
+    <path d="M 300 50 L 320 70 L 350 70 L 330 90 L 340 120 L 310 105 L 280 120 L 290 90 L 270 70 L 300 70 Z"/>
+    <path d="M 500 50 L 520 70 L 550 70 L 530 90 L 540 120 L 510 105 L 480 120 L 490 90 L 470 70 L 500 70 Z"/>
+    <path d="M 700 50 L 720 70 L 750 70 L 730 90 L 740 120 L 710 105 L 680 120 L 690 90 L 670 70 L 700 70 Z"/>
+    <path d="M 900 50 L 920 70 L 950 70 L 930 90 L 940 120 L 910 105 L 880 120 L 890 90 L 870 70 L 900 70 Z"/>
+    <path d="M 1100 50 L 1120 70 L 1150 70 L 1130 90 L 1140 120 L 1110 105 L 1080 120 L 1090 90 L 1070 70 L 1100 70 Z"/>
+
+    <path d="M 200 350 L 220 370 L 250 370 L 230 390 L 240 420 L 210 405 L 180 420 L 190 390 L 170 370 L 200 370 Z"/>
+    <path d="M 400 350 L 420 370 L 450 370 L 430 390 L 440 420 L 410 405 L 380 420 L 390 390 L 370 370 L 400 370 Z"/>
+    <path d="M 600 350 L 620 370 L 650 370 L 630 390 L 640 420 L 610 405 L 580 420 L 590 390 L 570 370 L 600 370 Z"/>
+    <path d="M 800 350 L 820 370 L 850 370 L 830 390 L 840 420 L 810 405 L 780 420 L 790 390 L 770 370 L 800 370 Z"/>
+    <path d="M 1000 350 L 1020 370 L 1050 370 L 1030 390 L 1040 420 L 1010 405 L 980 420 L 990 390 L 970 370 L 1000 370 Z"/>
+  </g>
+
+  <!-- Islamic Dome Silhouette on left -->
+  <g transform="translate(80, 80)" filter="url(#shadow)">
+    <rect width="260" height="260" rx="40" fill="url(#cardGrad)" stroke="#10B981" stroke-width="2.5"/>
+    
+    <!-- Minaret & Dome Icon -->
+    <path d="M 130 65 Q 130 95 90 125 H 170 Q 130 95 130 65 Z" fill="url(#goldGrad)"/>
+    <rect x="90" y="125" width="80" height="85" rx="6" fill="#047857" stroke="#F59E0B" stroke-width="2"/>
+    <!-- Islamic Arch Window -->
+    <path d="M 115 150 Q 130 135 145 150 V 190 H 115 Z" fill="#022C22" stroke="#FDE68A" stroke-width="1.5"/>
+    <!-- Crescent Moon on top -->
+    <path d="M 126 48 A 10 10 0 1 0 136 58 A 8 8 0 1 1 126 48 Z" fill="#FDE68A"/>
+    <!-- Counter Badge in card -->
+    <rect x="50" y="218" width="160" height="26" rx="13" fill="#022C22" stroke="#10B981" stroke-width="1.2"/>
+    <text x="130" y="235" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="11" fill="#A7F3D0" text-anchor="middle">REAL-TIME FIRESTORE</text>
+  </g>
+
+  <!-- Right Side: Typography & Badges -->
+  <g transform="translate(390, 75)">
+    <!-- Pill Header -->
+    <g transform="translate(0, 10)">
+      <rect x="0" y="0" width="290" height="28" rx="14" fill="#064E3B" stroke="#10B981" stroke-width="1.2"/>
+      <circle cx="14" cy="14" r="5" fill="#F59E0B"/>
+      <text x="30" y="19" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="12" fill="#D1FAE5" letter-spacing="1">ISLAMIC REALTIME FLUTTER APP</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="92" font-family="'Segoe UI', -apple-system, sans-serif" font-weight="900" font-size="46" fill="#FFFFFF" letter-spacing="-0.5">
+      Salawat Counter <tspan fill="url(#goldGrad)">ﷺ</tspan>
+    </text>
+
+    <!-- Arabic Title -->
+    <text x="0" y="136" font-family="'Cairo', 'Segoe UI', sans-serif" font-weight="700" font-size="24" fill="#FDE68A">
+      تطبيق عدّاد الصلاة على النبي ﷺ (شخصي وإجمالي لحظي)
+    </text>
+
+    <!-- Subtitle English -->
+    <text x="0" y="170" font-family="'Segoe UI', sans-serif" font-weight="400" font-size="15" fill="#94A3B8">
+      A real-time Islamic community counter app built with Flutter, Cloud Firestore, and custom Islamic geometry.
+    </text>
+
+    <!-- Feature Pills -->
+    <g transform="translate(0, 210)">
+      <!-- Pill 1: Flutter -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="125" height="34" rx="17" fill="#064E3B" stroke="#38BDF8" stroke-width="1.2"/>
+        <text x="62" y="22" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#E0F2FE" text-anchor="middle">⚡ Flutter 3</text>
+      </g>
+
+      <!-- Pill 2: Firestore -->
+      <g transform="translate(135, 0)">
+        <rect x="0" y="0" width="145" height="34" rx="17" fill="#064E3B" stroke="#F59E0B" stroke-width="1.2"/>
+        <text x="72" y="22" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#FEF3C7" text-anchor="middle">🔥 Cloud Firestore</text>
+      </g>
+
+      <!-- Pill 3: Offline-First -->
+      <g transform="translate(290, 0)">
+        <rect x="0" y="0" width="140" height="34" rx="17" fill="#064E3B" stroke="#10B981" stroke-width="1.2"/>
+        <text x="70" y="22" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#D1FAE5" text-anchor="middle">📱 Offline-First</text>
+      </g>
+
+      <!-- Pill 4: Custom Islamic Painter -->
+      <g transform="translate(440, 0)">
+        <rect x="0" y="0" width="180" height="34" rx="17" fill="#064E3B" stroke="#D97706" stroke-width="1.2"/>
+        <text x="90" y="22" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#FEF3C7" text-anchor="middle">🎨 Custom Islamic Art</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+*.iml
+*.class
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+.idea/
+*.g.dart
+
+# Firebase cache
+.firebase/
+
+android/app/debug
+android/app/profile
+android/app/release
+android/**/gradle-wrapper.jar
+android/.gradle
+android/captures/
+android/gradlew
+android/gradlew.bat
+android/local.properties
+android/**/GeneratedPluginRegistrant.java
+android/key.properties
+*.jks
+
+# iOS
+ios/Flutter/.last_build_id
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/ServiceDefinitions.json
+**/GeneratedPluginRegistrant.*
